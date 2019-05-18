@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Home | Intrellit</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+  <script>
+			$(function(){
+			    $(".top-menu").on("click","a", function (event) {
+			        event.preventDefault();
+			        var id  = $(this).attr('href'),
+			            top = $(id).offset().top;
+			            $('body,html').animate({scrollTop: top}, 1000);
+			    });
+			});
+		</script>
+	<style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Oswald', sans-serif;
+    }
+.top-menu {
+  background: rgba(255,255,255,.5);
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar-logo {
+  float: left;
+  line-height: 61px;
+  padding-left: 70px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #008080;
+  transition:.3s linear;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+  float: right;
+}
+.menu-main li {
+  display: inline-block;
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #008080;
+  transition:.3s linear;
+}
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #008b8b;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+header {
+  background: url(background_new.jpg);
+  margin-top: 100px;
+  padding: 50px;
+  }
+header h2 {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+
+}  
+header p, footer p {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+h3 {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+div.solution {
+	padding-top: 50px;
+}
+div.solution p{
+  margin: 0 70px 50px;
+  font-weight: 100;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+div.box {
+  width: 50%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+div.box p{
+  margin-top: 20px;
+  text-align: center;
+}
+div.box img{
+  width: 80%;
+}
+div.about{
+  clear: both;
+  padding-top: 5px;
+}
+div.about a {
+	    color: #008080;
+}
+div.frame {
+  width: 33%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+div.frame p{
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+
+  font-weight: 100;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+div.frame img{
+  width: 80%;
+
+
+}
+div.about{
+  clear: both;
+  //padding-top: 5px;
+  overflow: hidden;
+  padding: 50px 70px;
+}
+
+div.contact {
+   width: 100%;
+   //background-color: #008080;
+   background: url(background_new.jpg);
+   color: black;
+   text-align: center;
+   padding: 10px 0 70px;
+}
+div.contact a {
+  color: black;
+  //font-weight: 200;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+div.contact h3 {
+  //color: white;
+}
+.menu-main a:hover:before {opacity: 1;}
+/*@media (max-width: 660px) {
+.menu-main {
+  float: none;
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+.menu-main li {display: block;}
+}*/
+@media (max-width: 1000px) {
+	div.frame {
+		width: 70%;
+		float: none;
+		margin: 75px auto;
+	}
+	header p, footer p {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+@media (max-width: 800px) {
+	header p, footer p {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	div.frame {
+		width: 100%;
+	}
+	div.box {
+    width: 80%;
+    float: none;
+	margin: auto;
+	margin-top: 30px;
+}
+}
+@media (max-width: 600px) {
+	.menu-main li {
+		display: block;
+}
+}
+	</style>
+</head>
+<body>
+<nav class="top-menu">
+  <div class="navbar-logo">Intrellit</div>
+  <ul class="menu-main">
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<header>
+  <h2>DEEP UNDERSTANDING <br /> OF MEDICAL MALPRACTICE</h2>
+  <p>Reviewing medical records in medical malpractice cases is one of the most crucial tasks towards understanding what happened in a case. However, the current process is extremely time-consuming, expensive, tedious, and error-prone. Most medical records lack clarity and are voluminous, disorganized, out of chronological order, and poorly scanned. These obstacles make it extraordinarily costly to locate the relevant sections, resulting in inefficiency, wasted attorney time, and high litigation costs.</p>
+</header>
+<div class = "solution" id="solution">
+  <h3>OUR SOLUTION</h3>
+  <p>Intrellit produces chronological narrative reports of medical records using Artificial Intelligence (AI) and does so at a fraction of the cost currently paid by law firms that delegate this task to associates, paralegals, and outsourcing companies. Our reports cover the entire chronology of a case, pulling information from various sets of medical records, and hone in on only the most relevant issues. The superior quality of our reports stems from our use of cutting edge technology and our years of experience in medical malpractice litigation. Our New York admitted attorneys, with the assistance of AI, are able to draft high-quality reports in a fraction of the time. To accomplish this, we use proprietary software that (1) digitalizes poorly scanned records 3 times more accurately than digitization technology currently available to law firms and (2) utilizes a smart-search tool, powered by AI, which reduces many time-consuming, tedious, and error-prone steps.</p>
+<div class= "box">
+  <img src="actual_result.png" alt="Our results: AI-enabled medical records search.">
+  <br>
+  <p><b>Finding that needle in a haystack with AI-enabled medical records search.</b></p>
+</div>
+<div class= "box">
+  <img src="expected_result.png" alt="Better text recognition for medical records.">
+  <br>
+  <p><b>Better text recognition for scanned medical records.</b></p>
+</div>
+</div>
+<div class = "about" id="about">
+<h3>MANAGEMENT TEAM</h3>
+<div class= "frame">
+  <img src="victor_bornstein.jpg" alt="Victor Bornstein, Ph.D.">
+  <br>
+  <p><b>Victor Bornstein, Ph.D.</b>
+  <br><br>
+  <i>CEO & Co-founder</i>
+  <br><br>
+  Victor has expertise in startups, accelerators, venture capital, and scientific research. Before Intrellit, he was an assistant professor at the Mount Sinai Health System, where he developed new healthtech solutions. Prior to that, he worked at the TMCx Accelerator and at Digitalis Ventures.</p>
+  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvictorbornstein%2F&sa=D&sntz=1&usg=AFQjCNHQjWOZAZ7enZTtoOF88bZn2cR5fg" title="Go to LinkedIn">LinkedIn</a>
+   | 
+  <a href="https://www.google.com/url?q=https%3A%2F%2Ftwitter.com%2F%3Flogged_out%3D1%26lang%3Den&sa=D&sntz=1&usg=AFQjCNEMRZQyYyBTF4vmvjxaQCXeHq3qPw" title="Go to Twitter">Twitter</a>
+</div>
+<div class= "frame">
+  <img src="serge_zenin.jpg" alt="Serge Zenin, Esq.">
+  <br>
+  <p><b>Serge Zenin, Esq.</b>
+  <br><br><i>Chief Legal Officer & Co-founder</i>
+  <br><br>
+  Serge is a medical malpractice attorney, who worked at a plaintiff's firm as well as one of the largest medical malpractice defense firms. He has crafted winning legal arguments for dozens of medical malpractice cases.</p>
+  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fserge-zenin-09503413%2F&sa=D&sntz=1&usg=AFQjCNEhuImPwxnAQwOEKGo9XPaluqIxuA" title="Go to LinkedIn">LinkedIn</a>
+</div>
+<div class= "frame">
+  <img src="oleksandr_zakharchuk.jpg" alt="Oleksandr Zakharchuk">
+  <br>
+  <p><b>Oleksandr Zakharchuk</b>
+  <br><br>
+  <i>CTO & Co-founder</i>
+  <br><br>
+  Oleksandr is an internationally recognized AI expert. Before Intrellit, he was a Google Developer Expert in machine learning and an advisor to AI startups at various stages (Seed to Series B). Prior to that, he worked for 5 years at Google in machine learning, deep learning, and natural language processing.</p>
+  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Foleksandrzakharchuk%2F&sa=D&sntz=1&usg=AFQjCNGSD_V3MPKeWyjAiP5y30STLAwhXw" title="Go to LinkedIn">LinkedIn</a>
+   | 
+  <a href="https://developers.google.com/experts/people/oleksandr-zakharchuk" title="Go to Google Exper">Google Expert</a>
+</div>
+</div>
+<footer>
+  <div class = "contact" id="contact">
+    <h3>CONTACT US</h3>
+  <p><a href="mailto:info@intrellit.com">info@intrellit.com</a><br>
+  Intrellit – Deep understanding of medical malpractice<br>
+  &copy; Copyright 2019 Intrellit</p>
+  </div>
+</footer>
+</body>
+</html>
