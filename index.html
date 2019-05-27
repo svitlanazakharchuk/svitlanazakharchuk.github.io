@@ -94,8 +94,10 @@ header p, footer p {
   font-weight: 100;
   font-size: 1.2em;
   letter-spacing: 1px;
-  padding-left: 200px;
-  padding-right: 200px;
+  //padding-left: 200px;
+  //padding-right: 200px;
+  width: 900px;
+  margin: auto;
 }
 h3 {
   font-size: 3em;
@@ -105,15 +107,18 @@ h3 {
   margin-bottom: 30px;
 }
 div.solution {
-	padding-top: 50px;
+	padding: 50px;
 }
-div.solution p{
-  margin: 0 70px 50px;
+div.conteiner {
+	width: 900px;
+	margin: auto;
+}
+div.solution p {
+  width: 900px;
   font-weight: 100;
   font-size: 1.2em;
   letter-spacing: 1px;
-  padding-left: 200px;
-  padding-right: 200px;
+  margin: 0 auto 50px;
 }
 div.box {
   width: 50%;
@@ -123,10 +128,11 @@ div.box {
 }
 div.box p{
   margin-top: 20px;
-  text-align: center;
+  width: 100%;
+  //text-align: center;
 }
 div.box img{
-  width: 80%;
+  width: 100%;
 }
 div.about{
   clear: both;
@@ -206,15 +212,15 @@ div.contact h3 {
 		margin: 75px auto;
 	}
 	header p, footer p {
-		padding-left: 70px;
-		padding-right: 70px;
-	}
-}
-@media (max-width: 800px) {
-	header p, footer p {
+		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
 	}
+	div.solution p, div.conteiner  {
+		width: 100%;
+	}
+}
+@media (max-width: 800px) {
 	div.frame {
 		width: 100%;
 	}
@@ -248,6 +254,7 @@ div.contact h3 {
 <div class = "solution" id="solution">
   <h3>OUR SOLUTION</h3>
   <p>Intrellit produces chronological narrative reports of medical records using Artificial Intelligence (AI) and does so at a fraction of the cost currently paid by law firms that delegate this task to associates, paralegals, and outsourcing companies. Our reports cover the entire chronology of a case, pulling information from various sets of medical records, and hone in on only the most relevant issues. The superior quality of our reports stems from our use of cutting edge technology and our years of experience in medical malpractice litigation. Our New York admitted attorneys, with the assistance of AI, are able to draft high-quality reports in a fraction of the time. To accomplish this, we use proprietary software that (1) digitalizes poorly scanned records 3 times more accurately than digitization technology currently available to law firms and (2) utilizes a smart-search tool, powered by AI, which reduces many time-consuming, tedious, and error-prone steps.</p>
+  <div class="conteiner">
 <div class= "box">
   <img src="actual_result.png" alt="Our results: AI-enabled medical records search.">
   <br>
@@ -259,7 +266,9 @@ div.contact h3 {
   <p><b>Better text recognition for scanned medical records.</b></p>
 </div>
 </div>
+</div>
 <div class = "about" id="about">
+<div class="conteiner">
 <h3>MANAGEMENT TEAM</h3>
 <div class= "frame">
   <img src="victor_bornstein.jpg" alt="Victor Bornstein, Ph.D.">
@@ -281,6 +290,7 @@ div.contact h3 {
   <br><br>
   Serge is a medical malpractice attorney, who worked at a plaintiff's firm as well as one of the largest medical malpractice defense firms. He has crafted winning legal arguments for dozens of medical malpractice cases.</p>
   <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fserge-zenin-09503413%2F&sa=D&sntz=1&usg=AFQjCNEhuImPwxnAQwOEKGo9XPaluqIxuA" title="Go to LinkedIn">LinkedIn</a>
+  
 </div>
 <div class= "frame">
   <img src="oleksandr_zakharchuk.jpg" alt="Oleksandr Zakharchuk">
@@ -293,6 +303,7 @@ div.contact h3 {
   <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Foleksandrzakharchuk%2F&sa=D&sntz=1&usg=AFQjCNGSD_V3MPKeWyjAiP5y30STLAwhXw" title="Go to LinkedIn">LinkedIn</a>
    | 
   <a href="https://developers.google.com/experts/people/oleksandr-zakharchuk" title="Go to Google Exper">Google Expert</a>
+</div>
 </div>
 </div>
 <footer>
